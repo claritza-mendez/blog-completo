@@ -14,3 +14,144 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/* Menú Responsivo */
+
+label img {
+    width: 30px;
+    display: none;
+}
+
+.movil input {
+    display: none;
+}
+
+.movil .navegacion {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .contenedor {
+        width: 90%;
+    }
+    .contenedor-navegacion {
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+    .logo {
+        justify-content: space-between;
+        width: 75%;
+        margin-bottom: 7px;
+    }
+    .logo img {
+        width: 225px;
+        height: 20px;
+    }
+    .contenedor-navegacion .navegacion {
+        display: none;
+    }
+    .movil {
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        /*        margin-right: 25px;*/
+        display: block;
+        width: 100%;
+        margin-top: -45px;
+    }
+    .movil .navegacion {
+        display: none;
+        height: auto;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .item {
+        margin-bottom: 15px;
+    }
+    .movil img {
+        display: block;
+        margin-bottom: 10px;
+        /*margin-left: auto;
+        margin-right: auto;*/
+    }
+    label {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #menu:checked~.navegacion {
+        display: block;
+    }
+    .item:before {
+        bottom: -5px;
+    }
+}
+
+@media (max-width:480px) {
+    .contenedor {
+        width: 95%;
+    }
+}
+
+@media (max-width:375px) {
+    .contenedor {
+        width: 95%;
+    }
+    .header {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 0;
+    }
+}
+
+
+/**CUERPO DE LA PÁGINA***/
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--colorTitulo);
+    text-align: center;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articulos {
+    width: 60%;
+}
+
+.articulo {
+    margin-bottom: 25px;
+}
+
+.articulo h3 {
+    font-size: 1.5rem;
+    color: var(--colorSubtitulo);
+    margin-bottom: 15px;
+}
+
+.articulo img {
+    width: 300px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 8px 1px black;
+}
+
+.articulo p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.boton {
+    padding: 7px 25px;
+    background-color: var(--fondoBarra);
+    color: var(--colorBoton);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+}
