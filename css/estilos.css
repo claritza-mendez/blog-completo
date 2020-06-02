@@ -14,3 +14,84 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/*** Navegación ***/
+
+.barra-navegacion {
+    width: 100%;
+    background-color: var(--fondoBarra);
+    margin-bottom: 25px;
+}
+
+.contenedor-navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: Logo 2.5s ease;
+}
+
+.logo img {
+    width: 270px;
+    height: 25px;
+}
+
+@keyframes Logo {
+    0% {
+        /*left: -550px;*/
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        /*left:0;*/
+        opacity: 1;
+    }
+}
+
+.navegacion {
+    height: 55px;
+    flex: 0 0 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    list-style: none;
+    flex: 0 0 25%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.item:before {
+    content: '';
+    width: 0%;
+    position: absolute;
+    height: 2px;
+    bottom: 1px;
+    background-color: white;
+    transition: width 1s ease;
+}
+
+.item:hover::before {
+    width: 100%;
+}
+
+.item a {
+    color: var(--colorBoton);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
